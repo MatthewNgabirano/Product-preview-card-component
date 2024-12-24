@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+:root{
+  --clr-primary-400:hsl(158, 87%, 25%);
+  --clr-secondary-200:hsl(30,38%,92%);
+
+  --clr-neutral-900:hsl(212,21%,14%);
+  --clr-neutral-400:hsl(228,12%,48%);
+  --clr-neutral-100:hsl(0,0%,100%);
+
+  --fw-regular:500;
+  --fw-bold:700;
+
+  --fw-accent:: "Montserrat", serif;
+  --base-:"Fraunces", serif;
+}
+
+body{
+  font-family: var(--base-);
+  font-weight: var(--fw-regular);
+  font-size: 0.875rem;
+  color: var(--clr-neutral-400);
+  background-color: var(--clr-secondary-200);
+  display: grid;
+  place-content: center;
+  margin: 1rem;
+}
+
+.flex-group{
+display: flex;
+gap: 1rem;
+flex-wrap: wrap;
+align-items: center;
+}
+
+.product{
+  --content-padding:1.5rem;
+  --content-spacing:1rem;
+  background-color: var(--clr-neutral-100);
+  border-radius: 0.5rem;
+  overflow: hidden;
+  display: grid;
+  max-width: 600px;
+}
+@media(min-width:600px){
+  .product{
+    grid-template-columns: 1fr 1fr;
+  }
+}
+.product-content{
+  padding: var(--content-padding);
+  display: grid;
+  gap: var(--content-padding);
+}
+
+.product-text{
+  font-size: 0.8125rem;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+}
+
+.product-title{
+  font-size: 2rem;
+  font-family: var(--fw-accent);
+  color: var(--clr-neutral-900);
+}
+.current-price_product{
+  font-size: 2rem;
+  font-family: var(--fw-accent);
+  color: var(--clr-primary-400);
+}
+.button, .cart{
+  cursor: pointer;
+  padding: 0.5em 1.5em;
+  text-decoration: none;
+  border-radius:0.5rem;
+  border: 0;
+  display: inline;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.75em 1.5em;
+  background-color: var(--clr-primary-400);
+color: var(--clr-neutral-100);
+  font-weight: var(--fw-bold);
+  font-size: 0.925rem;
+}
+.button:is(:hover, :focus){
+  background-color:hsl(158, 94%, 14%) ;
+}
+
+/* 1. Use a more-intuitive box-sizing model */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/* 2. Remove default margin */
+* {
+  margin: 0;
+}
+
+body {
+  /* 3. Add accessible line-height */
+  line-height: 1.5;
+  /* 4. Improve text rendering */
+  -webkit-font-smoothing: antialiased;
+}
+
+/* 5. Improve media defaults */
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* 6. Inherit fonts for form controls */
+input, button, textarea, select {
+  font: inherit;
+}
+
+/* 7. Avoid text overflows */
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+h1,h2{
+  line-break: 1.5;
+}
+
+
+
+
+/*
+  9. Create a root stacking context
+*/
+#root, #__next {
+  isolation: isolate;
+}
